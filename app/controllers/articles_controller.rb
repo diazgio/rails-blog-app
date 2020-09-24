@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class ArticlesController < ApplicationController
   include ArticlesHelper
-  before_action :require_login, except: [:index, :show]
+  before_action :require_login, except: %i[index show]
 
   def index
     @articles = Article.all

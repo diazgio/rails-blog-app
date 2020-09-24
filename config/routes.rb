@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :articles do
@@ -8,7 +10,7 @@ Rails.application.routes.draw do
 
   resources :authors
 
-  resources :author_sessions, only: [:new, :create, :destroy]
+  resources :author_sessions, only: %i[new create destroy]
 
   get 'login'  => 'author_sessions#new'
   get 'logout' => 'author_sessions#destroy'
