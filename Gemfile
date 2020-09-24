@@ -56,5 +56,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Images
 gem "paperclip"
 
-#Authentication
+# Authentication
 gem 'sorcery'
+# Rubocop
+gem 'rubocop', '~>0.81.0'
